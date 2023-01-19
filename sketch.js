@@ -19,9 +19,6 @@ function draw() {
   a += 0.1;
   r += 1;
 
-  strokeWeight(0.5);
-  stroke("#1A2227")
-
 
   varLarp = varLarp + larp_direction * 0.003;
   if (varLarp > 1 || varLarp<0) {
@@ -29,16 +26,18 @@ function draw() {
     larp_direction *= -1;
   }
 
+  // create the geometric element 
   push()
   stroke(lerpColor(color('red'), color('blue'), varLarp));
   strokeWeight(1);
   fill(lerpColor(color('blue'), color('red'), varLarp));
   translate(windowWidth/2, windowHeight/2);
-  rotate(frameCount*2);
-  rectMode(CENTER);
-  rect(x, y, frameCount/5, frameCount/4);
+  rotate(frameCount*19);
+  ellipseMode(CENTER);
+  ellipse(x, y, frameCount/5, frameCount/5);
 
-  if (frameCount == 950){
+  if (frameCount == 1950){
   noLoop()
   }
 }
+
