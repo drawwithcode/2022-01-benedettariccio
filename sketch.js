@@ -26,7 +26,7 @@ function draw() {
     larp_direction *= -1;
   }
 
-  // create the geometric element 
+  // create the moving circle with framerate and transform
   push()
   stroke(lerpColor(color('red'), color('blue'), varLarp));
   strokeWeight(1);
@@ -36,6 +36,7 @@ function draw() {
   ellipseMode(CENTER);
   ellipse(x, y, frameCount/5, frameCount/5);
 
+  // after framecount>1950 it stops
   if (frameCount == 1950){
   noLoop()
   }
