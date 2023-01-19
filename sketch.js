@@ -38,7 +38,7 @@ function draw() {
   rectMode(CENTER);
   rect(x, y, frameCount/5, frameCount/4);
 
-  if (frameCount == 1950){
+  if (frameCount == 950){
   noLoop()
   }
 }
