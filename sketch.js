@@ -22,6 +22,7 @@ function draw() {
   strokeWeight(0.5);
   stroke("#1A2227")
 
+
   varLarp = varLarp + larp_direction * 0.003;
   if (varLarp > 1 || varLarp<0) {
    
